@@ -1,0 +1,16 @@
+<div class="container text-center mt-4">
+  <div class="d-flex justify-content-between mb-3 px-3">
+    <h2 class="mb-4">¡Gira la ruleta!</h2>
+    <button class="btn btn-outline-danger" (click)="logout()">Cerrar Sesión</button>
+  </div>
+
+  <div class="ruleta-container mx-auto mb-4" [style.transform]="
+    'rotate(' + grados + 'deg)'
+    " [class.spin]="girando">
+    <img src="assets/ruleta.png" alt="ruleta" class="ruleta-img" />
+  </div>
+
+  <button class="btn btn-primary btn-lg" (click)="girarRuleta()" [disabled]="girando">
+    {{ girando ? 'Girando...' : 'Girar Ruleta' }}
+  </button>
+</div>

@@ -10,11 +10,11 @@ export class AuthService {
   constructor(private http: HttpClient, private router: Router) {}
 
   login(data: { email: string; password: string }) {
-    return this.http.post(`${this.apiUrl}/login`, data);
+    return this.http.post(`${this.apiUrl}/api/login`, data);
   }
 
   register(data: any) {
-    return this.http.post(`${this.apiUrl}/register`, data);
+    return this.http.post(`${this.apiUrl}/api/register`, data);
   }
 
   logout() {

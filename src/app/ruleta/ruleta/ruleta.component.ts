@@ -16,7 +16,8 @@ export class RuletaComponent {
   grados = 0;
   intentos = 0;
   premioNombre = '';
-  api = 'http://localhost:3000/api/spin';
+  // api = 'http://localhost:3000/api/spin';
+  api = 'https://ruleta-backend-0gt5.onrender.com/api/spin';
 
   constructor(private http: HttpClient, private router: Router) {}
 
